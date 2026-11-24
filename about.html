@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <h1>calculate</h1>
+    <div id="c">
+        <label>first number:</label>
+        <input type="number" placeholder="enter first no" id="no1">
+        <select id="operator">
+            <option value="+">addition(+)</option>
+            <option value="*">multiplication(*)</option>
+            <option value="/">division(/)</option>
+            <option value="-">subtraction(-)</option>
+             
+        </select>
+        <label>second number:</label>
+        <input type="number" placeholder="enter second no" id="no2">
+        </div>
+        
+    <button onclick="calculate()">calculate</button>
+    <h2>result:</h2>
+    <p></p>
+    <script>
+        function calculate(){
+            let num1=Number(document.getElementById('num1').value);
+            let num2=Number(document.getElementById('num2').value);
+            let operator=document.getElementById("operator").value);
+            let answer;
+            if(operator==="+"){
+            result=num1 + num2;
+            }
+           else if(operator==="-"){
+                result=num1-num2;
+            }
+           else if(operator==="*"){
+                result=num1*num2;
+            }
+           else if(operator==="/")
+           if(num2===0){
+            result=document.getElementById("result").innerText="cannot divide by zero";
+           }
+           else
+           {
+                 result=num1 / num2;
+            }
+            // display result
+            document.getElementById('result').innerHTML="result:" + result;
+        }
+        
+        
+    </script>
+    
+    
+</body>
+</html>
